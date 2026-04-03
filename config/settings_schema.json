@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "primary_color",
+        "label": "Primary Color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "secondary_color",
+        "label": "Secondary Color",
+        "default": "#f5f5f5"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading_font",
+        "label": "Heading Font",
+        "default": "Playfair Display"
+      },
+      {
+        "type": "text",
+        "id": "body_font",
+        "label": "Body Font",
+        "default": "Montserrat"
+      }
+    ]
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": {}
+    },
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "tagline": "Handcrafted Elegance • Limited Drop",
+        "product_name": "Midnight Silk Kurti",
+        "description": "A stunning midnight blue silk kurti featuring intricate gold embroidery and premium fabric texture. Crafted with precision in Surat, this piece embodies timeless elegance.",
+        "price": "₹8,999",
+        "original_price": "₹12,999",
+        "discount": "SAVE 31%",
+        "cta_text": "SECURE YOUR PIECE",
+        "cta_link": "/products/midnight-silk-kurti"
+      }
+    },
+    "countdown": {
+      "type": "countdown",
+      "settings": {
+        "title": "Drop Vanishes In"
+      }
+    },
+    "trust-badges": {
+      "type": "trust-badges",
+      "blocks": [
+        {
+          "type": "badge",
+          "settings": {
+            "icon": "🔨",
+            "title": "Handcrafted in Surat",
+            "description": "Master artisans at work"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "icon": "♻️",
+            "title": "Zero Waste",
+            "description": "Sustainable practices"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "icon": "❤️",
+            "title": "Direct to Heart",
+            "description": "Straight from creators"
+          }
+        }
+      ]
+    },
+    "the-vault": {
+      "type": "the-vault",
+      "settings": {
+        "title": "THE ARCHIVE",
+        "subtitle": "Past designs that found their forever homes"
+      },
+      "blocks": [
+        {"type": "product"},
+        {"type": "product"},
+        {"type": "product"},
+        {"type": "product"},
+        {"type": "product"},
+        {"type": "product"},
+        {"type": "product"},
+        {"type": "product"},
+        {"type": "product"}
+      ]
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "header",
+    "hero",
+    "countdown",
+    "trust-badges",
+    "the-vault",
+    "footer"
+  ]
+}

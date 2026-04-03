@@ -1,0 +1,77 @@
+<section class="py-16 px-6 md:px-12 bg-background">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold mb-3 font-['Playfair_Display'] text-foreground">{{ section.settings.title }}</h2>
+      <p class="text-muted-foreground">{{ section.settings.subtitle }}</p>
+    </div>
+    <div class="grid grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
+      {% for block in section.blocks %}
+        <div class="relative group overflow-hidden rounded-lg aspect-square border border-border/50">
+          <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.name }}" class="w-full h-full object-cover grayscale opacity-60" />
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-primary font-['Playfair_Display'] font-bold text-lg tracking-wider opacity-80 rotate-[-15deg] border border-primary/30 px-4 py-2 rounded">
+              SOLD OUT
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "The Archive",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "THE ARCHIVE"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Past designs that found their forever homes"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Archive Product",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Product Name",
+          "default": "Sample Product"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 9,
+  "presets": [
+    {
+      "name": "The Archive",
+      "blocks": [
+        {"type": "product"},
+        {"type": "product"},
+        {"type": "product"},
+        {"type": "product"},
+        {"type": "product"},
+        {"type": "product"},
+        {"type": "product"},
+        {"type": "product"},
+        {"type": "product"}
+      ]
+    }
+  ]
+}
+{% endschema %}</content>
+<parameter name="filePath">/workspaces/theme-fixer/sections/the-vault.liquid

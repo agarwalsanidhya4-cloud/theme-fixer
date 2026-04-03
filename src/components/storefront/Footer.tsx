@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export function Footer() {
   return (
-    <footer className="bg-black/50 border-t border-gray-800 py-12 px-6">
+    <footer className="bg-secondary/50 border-t border-border py-12 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
@@ -38,9 +38,9 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="border-t border-gray-800 pt-8 text-center">
+        <div className="border-t border-border pt-8 text-center">
           <p className="text-muted-foreground text-sm">© 2026 12AM ETHNIC. Every piece is handcrafted with love in Surat.</p>
-          <p className="text-gray-500 text-xs mt-2">New drop every midnight. Set your alarm.</p>
+          <p className="text-muted-foreground/60 text-xs mt-2">New drop every midnight. Set your alarm.</p>
         </div>
       </div>
     </footer>

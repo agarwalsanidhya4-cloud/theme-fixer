@@ -1,0 +1,58 @@
+<header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+  <div class="max-w-7xl mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+          <span class="text-primary-foreground font-bold text-xl font-['Playfair_Display']">12</span>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold font-['Playfair_Display'] text-primary">12AM ETHNIC</h1>
+          <p class="text-xs text-muted-foreground">Daily Drop at Midnight</p>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="/" class="text-sm transition-colors relative text-primary font-semibold">
+          Today's Drop
+          <div class="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary"></div>
+        </a>
+        <a href="/pages/archive" class="text-sm transition-colors relative text-muted-foreground hover:text-foreground">
+          Archive
+        </a>
+        <a href="/pages/how-it-works" class="text-sm transition-colors relative text-muted-foreground hover:text-foreground">
+          How It Works
+        </a>
+        <a href="/pages/about" class="text-sm transition-colors relative text-muted-foreground hover:text-foreground">
+          About
+        </a>
+        <a href="/pages/faq" class="text-sm transition-colors relative text-muted-foreground hover:text-foreground">
+          FAQ
+        </a>
+        <a href="/pages/contact" class="text-sm transition-colors relative text-muted-foreground hover:text-foreground">
+          Contact
+        </a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <a href="/cart" class="relative p-2 hover:bg-muted/50 rounded-lg transition-colors">
+          <span class="text-muted-foreground">🛒</span>
+          <span class="absolute top-0 right-0 w-4 h-4 bg-primary text-primary-foreground text-xs font-bold rounded-full flex items-center justify-center">{{ cart.item_count }}</span>
+        </a>
+        <a href="/account" class="p-2 hover:bg-muted/50 rounded-lg transition-colors">
+          <span class="text-muted-foreground">👤</span>
+        </a>
+
+        <button class="lg:hidden p-2 hover:bg-muted/50 rounded-lg transition-colors">
+          <span class="text-muted-foreground">☰</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": []
+}
+{% endschema %}

@@ -31,18 +31,18 @@ export function CountdownTimer({ className = '' }: CountdownTimerProps) {
   ];
 
   return (
-    <div className={`flex gap-4 items-center ${className}`}>
+    <div className={`flex gap-8 items-center justify-center ${className}`}>
       {units.map((unit, i) => (
-        <div key={unit.label} className="flex items-center gap-4">
-          <div className="flex flex-col items-center">
-            <div className="bg-primary/10 border-2 border-primary rounded-lg px-4 py-3 min-w-[70px] text-center">
-              <span className="text-3xl font-bold text-primary font-['Playfair_Display']">
+        <div key={unit.label} className="flex flex-col items-center">
+          <div className="relative">
+            <div className="w-24 h-24 rounded-full border-4 border-primary/30 bg-secondary/20 flex items-center justify-center shadow-lg shadow-primary/20">
+              <span className="text-4xl font-bold text-primary font-['Playfair_Display'] drop-shadow-lg">
                 {String(unit.value).padStart(2, '0')}
               </span>
             </div>
-            <span className="text-xs text-muted-foreground mt-1">{unit.label}</span>
+            <div className="absolute inset-0 rounded-full border-2 border-primary animate-pulse opacity-50"></div>
           </div>
-          {i < units.length - 1 && <span className="text-2xl text-primary font-bold">:</span>}
+          <span className="text-xs text-primary font-semibold mt-2 tracking-wider">{unit.label}</span>
         </div>
       ))}
     </div>

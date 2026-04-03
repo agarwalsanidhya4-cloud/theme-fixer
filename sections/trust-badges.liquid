@@ -1,0 +1,82 @@
+<section class="px-6 md:px-12 py-16">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 py-8">
+      {% for block in section.blocks %}
+        <div class="flex flex-col items-center text-center gap-3 p-6 bg-muted/50 rounded-lg border border-border hover:border-primary/30 transition-all">
+          <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+            <span class="text-primary text-2xl">{{ block.settings.icon }}</span>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold mb-1">{{ block.settings.title }}</h4>
+            <p class="text-xs text-muted-foreground">{{ block.settings.description }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Trust Badges",
+  "blocks": [
+    {
+      "type": "badge",
+      "name": "Badge",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (emoji)",
+          "default": "🔨"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Handcrafted in Surat"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Master artisans at work"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "Trust Badges",
+      "blocks": [
+        {
+          "type": "badge",
+          "settings": {
+            "icon": "🔨",
+            "title": "Handcrafted in Surat",
+            "description": "Master artisans at work"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "icon": "♻️",
+            "title": "Zero Waste",
+            "description": "Sustainable practices"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "icon": "❤️",
+            "title": "Direct to Heart",
+            "description": "Straight from creators"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}</content>
+<parameter name="filePath">/workspaces/theme-fixer/sections/trust-badges.liquid

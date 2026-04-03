@@ -1,0 +1,49 @@
+<footer class="bg-secondary/50 border-t border-border py-12 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+            <span class="text-primary-foreground font-bold font-['Playfair_Display']">12</span>
+          </div>
+          <span class="font-bold font-['Playfair_Display'] text-primary">12AM ETHNIC</span>
+        </div>
+        <p class="text-muted-foreground text-sm">Handcrafted ethnic wear. One exclusive piece, every midnight.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Shop</h4>
+        <div class="flex flex-col gap-2">
+          <a href="/" class="text-muted-foreground hover:text-primary text-sm transition-colors">Today's Drop</a>
+          <a href="/pages/archive" class="text-muted-foreground hover:text-primary text-sm transition-colors">Archive</a>
+          <a href="/pages/how-it-works" class="text-muted-foreground hover:text-primary text-sm transition-colors">How It Works</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Company</h4>
+        <div class="flex flex-col gap-2">
+          <a href="/pages/about" class="text-muted-foreground hover:text-primary text-sm transition-colors">About Us</a>
+          <a href="/pages/contact" class="text-muted-foreground hover:text-primary text-sm transition-colors">Contact</a>
+          <a href="/pages/faq" class="text-muted-foreground hover:text-primary text-sm transition-colors">FAQ</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Account</h4>
+        <div class="flex flex-col gap-2">
+          <a href="/account" class="text-muted-foreground hover:text-primary text-sm transition-colors">My Account</a>
+          <a href="/cart" class="text-muted-foreground hover:text-primary text-sm transition-colors">Cart</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-border pt-8 text-center">
+      <p class="text-muted-foreground text-sm">© {{ 'now' | date: '%Y' }} 12AM ETHNIC. Every piece is handcrafted with love in Surat.</p>
+      <p class="text-muted-foreground/60 text-xs mt-2">New drop every midnight. Set your alarm.</p>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": []
+}
+{% endschema %}

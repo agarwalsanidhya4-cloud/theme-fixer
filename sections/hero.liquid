@@ -1,0 +1,101 @@
+<section class="relative min-h-screen flex items-center justify-center px-6 md:px-12 bg-background overflow-hidden">
+  <div class="max-w-7xl mx-auto w-full">
+    <div class="text-center mb-12">
+      <p class="text-primary text-sm font-semibold mb-4 tracking-wider uppercase">{{ section.settings.tagline }}</p>
+      <h1 class="text-6xl md:text-8xl font-bold mb-6 font-['Playfair_Display'] leading-tight text-foreground">
+        {{ section.settings.product_name }}
+      </h1>
+      <p class="text-muted-foreground text-xl leading-relaxed max-w-2xl mx-auto">
+        {{ section.settings.description }}
+      </p>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto">
+      <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-border/20">
+        <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.product_name }}" class="w-full h-[600px] md:h-[800px] object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent"></div>
+        <div class="absolute top-6 left-6 bg-primary/90 backdrop-blur-sm text-primary-foreground px-6 py-3 rounded-full font-bold text-sm">
+          TODAY'S DROP
+        </div>
+        <div class="absolute top-6 right-6 bg-secondary/70 backdrop-blur-sm px-6 py-3 rounded-full text-sm flex items-center gap-2">
+          <span class="text-primary">✨</span>
+          <span>LIMITED</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <div class="inline-flex items-baseline gap-6 mb-8">
+        <span class="text-5xl font-bold text-primary font-['Playfair_Display']">{{ section.settings.price }}</span>
+        <span class="text-2xl text-muted-foreground line-through">{{ section.settings.original_price }}</span>
+        <span class="bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-bold">{{ section.settings.discount }}</span>
+      </div>
+
+      <a href="{{ section.settings.cta_link }}" class="bg-primary hover:bg-primary/80 text-primary-foreground font-bold py-4 px-12 rounded-full text-lg transition-all hover:scale-105 hover:shadow-2xl hover:shadow-primary/20 inline-flex items-center gap-3">
+        <span>📦</span>
+        {{ section.settings.cta_text }}
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Handcrafted Elegance • Limited Drop"
+    },
+    {
+      "type": "text",
+      "id": "product_name",
+      "label": "Product Name",
+      "default": "Midnight Silk Kurti"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "A stunning midnight blue silk kurti featuring intricate gold embroidery and premium fabric texture."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Product Image"
+    },
+    {
+      "type": "text",
+      "id": "price",
+      "label": "Price",
+      "default": "₹8,999"
+    },
+    {
+      "type": "text",
+      "id": "original_price",
+      "label": "Original Price",
+      "default": "₹12,999"
+    },
+    {
+      "type": "text",
+      "id": "discount",
+      "label": "Discount Text",
+      "default": "SAVE 31%"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Button Text",
+      "default": "SECURE YOUR PIECE"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA Link"
+    }
+  ]
+}
+{% endschema %}</content>
+<parameter name="filePath">/workspaces/theme-fixer/sections/hero.liquid
