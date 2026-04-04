@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ShoppingCart, User } from 'lucide-react';
+import { Menu, X, User } from 'lucide-react';
+import { CartDrawer } from './CartDrawer';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -41,10 +42,7 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <Link to="/cart" className="relative p-2 hover:bg-muted/50 rounded-lg transition-colors">
-              <ShoppingCart className="w-5 h-5 text-muted-foreground" />
-              <span className="absolute top-0 right-0 w-4 h-4 bg-primary text-primary-foreground text-xs font-bold rounded-full flex items-center justify-center">0</span>
-            </Link>
+            <CartDrawer />
             <Link to="/account" className="p-2 hover:bg-muted/50 rounded-lg transition-colors">
               <User className="w-5 h-5 text-muted-foreground" />
             </Link>
